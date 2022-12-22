@@ -1,0 +1,22 @@
+@media (min-width: 992px) {
+    #button{
+        display: flex;
+        flex-direction: row;
+        margin-right: 20px;
+    }
+    
+    #log{
+        margin-left: 7px;
+    }
+}
+
+@media (max-width: 991px){
+    #button{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #log{
+        margin-top: 9px;
+    }
+}

@@ -1,0 +1,6 @@
+<div id="button">
+    <div>
+        <button class="btn btn-outline-light" id="log" (click)="login()" *ngIf="!isLogged">Log In</button>
+        <button class="btn btn-outline-light" id="log" (click)="onLogOut()" *ngIf="isLogged">Log Out</button>
+    </div>
+</div>

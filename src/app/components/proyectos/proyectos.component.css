@@ -1,0 +1,17 @@
+.row{
+    background-color: rgb(12, 2, 74);
+    padding: 20px;
+}
+
+.container{
+    width: auto;
+}
+
+.part1, .part2{
+    display: inline-block;
+    text-align: justify;
+}
+
+.img-proyecto:hover{
+    box-shadow: 5px 5px 20px white;
+}
