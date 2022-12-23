@@ -7,7 +7,7 @@ import { Experiencie } from '../model/experiencie';
   providedIn: 'root'
 })
 export class SExperiencieService {
-  expURL = 'http://localhost:8080/explab/'
+  expURL = 'http://backend-lucho9595.koyeb.app/explab/'
 
   constructor(private htppClient: HttpClient) { }
 

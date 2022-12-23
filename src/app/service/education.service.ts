@@ -7,7 +7,7 @@ import { Education } from '../model/education';
   providedIn: 'root'
 })
 export class EducationService {
-    educationURL = 'http://localhost:8080/education/'
+    educationURL = 'http://backend-lucho9595.koyeb.app/education/'
 
   constructor(private htppClient: HttpClient) { }
 
