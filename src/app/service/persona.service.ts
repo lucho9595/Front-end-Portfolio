@@ -7,7 +7,7 @@ import { persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'http://backend-lucho9595.koyeb.app/personas/';
+  URL = 'https://backend-lucho9595.koyeb.app/personas/';
   constructor(private http: HttpClient) { }
 
   //se utiliza el Observable para las busquedas asincronas
