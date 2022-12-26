@@ -4,7 +4,7 @@ import { SkillService } from 'src/app/service/skills.service';
 import { TokenService } from 'src/app/service/token.service';
 
 @Component({
-  selector: 'app-hys',
+  selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
