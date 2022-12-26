@@ -8,9 +8,9 @@ import { LogoAPComponent } from './components/logo-ap/logo-ap.component';
 import { SocialComponent } from './components/social/social.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
+import { SkillsComponent } from './components/skills/skills.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
-import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FooterComponent } from './components/footer/footer.component';
@@ -24,8 +24,8 @@ import { NewExperiencieComponent } from './components/experience/new-experiencie
 import { EditExperiencieComponent } from './components/experience/edit-experiencie/edit-experiencie.component';
 import { NewEducationComponent } from './components/education/new-education.component';
 import { EditEducationComponent } from './components/education/edit-education/edit-education.component';
-import { EditSkillsComponent } from './components/skills/edit-skills/edit-skills.component';
-import { NewSkillsComponent } from './components/skills/new-skills.component';
+import { EditSkillComponent } from './components/skills/edit-skills/edit-skills.component';
+import { NewSkillComponent } from './components/skills/new-skills.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,8 +45,8 @@ import { NewSkillsComponent } from './components/skills/new-skills.component';
     EditExperiencieComponent,
     NewEducationComponent,
     EditEducationComponent,
-    EditSkillsComponent,
-    NewSkillsComponent
+    EditSkillComponent,
+    NewSkillComponent
   ],
   imports: [
     BrowserModule,

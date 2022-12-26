@@ -8,7 +8,7 @@ import { TokenService } from 'src/app/service/token.service';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
-export class HysComponent implements OnInit {
+export class SkillsComponent implements OnInit {
   skill: Skill[] = [];
 
   constructor(private skillS: SkillService, private tokenService: TokenService) { }
