@@ -11,3 +11,8 @@ node_modules
 .sass-cache
 
 
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json
