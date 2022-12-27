@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  production: true,\n  URL: 'https://backend-lucho9595.koyeb.app/'\n};","map":null,"metadata":{},"sourceType":"module"}
