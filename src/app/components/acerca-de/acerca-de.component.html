@@ -1,6 +1,11 @@
 <div class="row p-4">
+    <!-- <div class="col-lg-2"> -->
+        <button type="button" class="btn btn-light" routerLink="/editaracercade/1" *ngIf="isLogged">
+            <i class="bi bi-pencil"></i>
+        </button>
+    <!-- </div> -->
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/20221011_100224.jpg" alt="" class="img-fluid" id="fotoperfil">
+        <img src={{persona.img}} alt="" class="img-fluid" id="fotoperfil">
     </div>
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
         <p class="text-white text-center mt-5"><strong>{{persona.nombre}} {{persona.apellido}}</strong></p>
@@ -10,7 +15,7 @@
         <span>
             <h1 class="text-white text-center">Acerca de mí</h1>
             <p class="text-white text-center">
-                Tengo 27 años, soy de Banfield, Buenos Aires - Argentina
+                {{persona.description}}
             </p>
         </span>
     </div>

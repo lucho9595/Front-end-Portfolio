@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  //URL: 'http://localhost:8080/',
-  URL: 'https://backend-lucho9595.koyeb.app/',
+  URL: 'http://localhost:8080/',
 };
 
 /*
