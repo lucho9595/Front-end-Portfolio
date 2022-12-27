@@ -1,0 +1,7 @@
+img {
+    max-width:500px;
+}
+
+img[src]{
+    max-width:300px; 
+}
