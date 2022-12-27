@@ -31,15 +31,21 @@ export class SkillsComponent implements OnInit {
     )
   }
 
-  delete(id: number){
-    if(id != undefined){
-      this.skillS.delete(id).subscribe(
-        data => {
-          this.cargarSkills();
-        }, err => {
-          alert("No se pudo borrar la skill");
-        }
-      )
+  delete(id?: number) {
+    if (id != undefined) {
+      let respuesta = confirm("Estas seguro que quieres eliminar?")
+      if (respuesta == true) {
+        this.skillS.delete(id).subscribe(
+          data => {
+            this.cargarSkills();
+            alert("Skill Borrada")
+          }, err => {
+            alert("No se pudo borrar la Skill");
+          }
+        )
+      } else {
+        alert("No se borro la Skill");
+      }
     }
   }
 }
