@@ -4,12 +4,13 @@ import { JwtDto } from '../model/jwt-dto';
 import { Observable } from 'rxjs';
 import { LoginUsuario } from '../model/login-usuario';
 import { NuevoUsuario } from '../model/nuevo-usuario';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'https://backend-lucho9595.koyeb.app/auth/';
+  authURL = environment.URL + 'auth/';
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {
