@@ -22,14 +22,15 @@ export class EditAcercadeComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activateRouter.snapshot.params['id'];
-    this.personaService.detail(id).subscribe(
-      data => {
+    this.personaService.detail(id).subscribe({
+      next: data => {
         this.persona = data;
-      }, err => {
+      },
+      error: err => {
         alert("Error al modificar Persona");
         this.router.navigate(['']);
       }
-    )
+    })
   }
 
   onUpdate(): void {
