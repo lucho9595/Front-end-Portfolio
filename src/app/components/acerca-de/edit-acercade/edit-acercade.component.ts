@@ -11,9 +11,7 @@ import { PersonaService } from 'src/app/service/persona.service';
 })
 export class EditAcercadeComponent implements OnInit {
   persona: persona = null;
-  imageSrc: string;
-  userFile: any;
-  imageSelected: any;
+
 
   constructor(private activateRouter: ActivatedRoute, 
     private personaService: PersonaService, 
@@ -53,16 +51,6 @@ export class EditAcercadeComponent implements OnInit {
     this.imageService.uploadImage($event, name);
   }
 
-    readURL($event: any) {
-      this.userFile = $event.target.files[0];
-      this.imageSelected = this.userFile.name;
-      if ($event.target.files && $event.target.files[0]) {
-        const reader = new FileReader();
-        reader.onload = (e: any) => {
-          this.imageSrc = e.target.result;
-        };
-        reader.readAsDataURL($event.target.files[0]);
-      }}
 }
 
 

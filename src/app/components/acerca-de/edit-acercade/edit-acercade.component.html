@@ -20,10 +20,10 @@
                 <div class="form-group">
                     <label for="img">Imagen de la Persona</label>
                     <input type="file" class="form-control" id="img" name="img" [(ngModel)]="persona.img"
-                        (change)="uploadImage($event); readURL($event)" accept=".jpg, .jpeg, .png">
+                        (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
                     <br />
                     <img id="blah"
-                        [src]="imageSrc || 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Antu_insert-image.svg/1200px-Antu_insert-image.svg.png'"
+                        [src]="imageService.url"
                         alt="your image" />
                 </div>
 
