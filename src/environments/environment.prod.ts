@@ -10,5 +10,5 @@ export const environment = {
     measurementId: 'G-VCMQTNQ0CN',
   },
   production: true,
-  // URL: 'https://backend-lucho9595.koyeb.app/',
+  URL: 'https://backend-lucho9595.koyeb.app/',
 };
