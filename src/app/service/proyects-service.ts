@@ -26,7 +26,7 @@ export class ProyectsService {
   
   
   //aca actualizamos los datos
-  public update(id: number, proyects: Proyects): Observable<any>{
+  public update(proyects: Proyects, id: number): Observable<any>{
     return this.httpClient.put<any>(this.URL + `update/${id}`, proyects)
   }
   

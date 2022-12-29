@@ -11,11 +11,11 @@ export class ImageService {
   constructor(private storage: Storage) { }
 
   public uploadImage($event: any, name: string) {
-    const file = $event.target.files[0];
-    console.log(file);
-    const imgRef = ref(this.storage, `imagen/` + name)
-    uploadBytes(imgRef, file)
-      .then(response => { this.getImages() })
+    const files = $event.target.files[0];
+    console.log(files);
+    const imgRefe = ref(this.storage, `imagen/` + name)
+    uploadBytes(imgRefe, files)
+      .then(_response => { this.getImages() })
       .catch(error => console.log(error))
   }
 
@@ -26,7 +26,6 @@ export class ImageService {
         for (let item of response.items) {
           this.url = await getDownloadURL(item);
           console.log("La url es: " + this.url);
-          
         }
       })
       .catch(error => console.log(error))

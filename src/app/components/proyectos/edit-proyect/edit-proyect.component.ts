@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Proyects } from 'src/app/model/proyects';
+import { ImageServiceProyects } from 'src/app/service/image-service-proyects.service';
+import { ProyectsService } from 'src/app/service/proyects-service';
 
 @Component({
   selector: 'app-edit-proyect',
@@ -6,10 +10,43 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-proyect.component.css']
 })
 export class EditProyectComponent implements OnInit {
+  proyect: Proyects = null;
 
-  constructor() { }
+  constructor(private activateRouter: ActivatedRoute, 
+    private proyectService: ProyectsService, 
+    private router: Router,
+    public imageService: ImageServiceProyects) { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+      const id = this.activateRouter.snapshot.params['id'];
+      this.proyectService.detail(id).subscribe(
+        data => {
+          this.proyect = data;
+        }, err => {
+          alert("Error al modificar");
+          this.router.navigate(['']);
+        }
+      )
+    }
+
+    onUpdate(): void {
+      const id = this.activateRouter.snapshot.params['id'];
+      this.proyect.img_proyect = this.imageService.url
+      this.proyectService.update(this.proyect, id).subscribe(
+        data => {
+          this.router.navigate(['']);
+          alert("Persona Editada")
+        }, err => {
+          alert("Error al modificar Persona");
+          this.router.navigate(['']);
+        }
+      )
+    }
+  
+    uploadImage($event: any){
+      const id = this.activateRouter.snapshot.params['id'];
+      const name = "Proyecto_" + id;
+      this.imageService.uploadImage($event, name);
+    }
 
 }

@@ -31,7 +31,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { EditProyectComponent } from './components/proyectos/edit-proyect/edit-proyect.component';
-import { NewProyectComponent } from './components/proyectos/new-proyect/new-proyect.component';
+import { NewProyectComponent } from './components/proyectos/new-proyect.component';
 @NgModule({
   declarations: [
     AppComponent,

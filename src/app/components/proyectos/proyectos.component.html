@@ -1,6 +1,11 @@
 <div class="row">
     <h1 class="text-white">Proyectos Realizados</h1>
-    <div class="container">
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-light" routerLink="/newproyect" *ngIf="isLogged">
+            Nuevo Proyecto
+        </button>
+    </div>
+    <!-- <div class="container">
         <div class="col-sm-12 col-md-7 col-lg-7 part1">
             <h2 class="text-white">Ticket Henry</h2>
             <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -47,5 +52,30 @@
                 <img src="../../../assets/Proyects/Sin título 3.png" class="img-fluid img-proyecto">
             </a>
         </div>
-    </div>
+    </div> -->
+    <table class="table">
+        <tbody>
+            <tr *ngFor="let Proyects of proyect">
+                <td class="text-white">
+                    <h3>{{Proyects.nombre}}</h3>
+                </td>
+                <td class="text-white">
+                    {{Proyects.description}}
+                </td>
+                <td>
+                    <img src={{Proyects.img_proyect}}  alt="" class="img-fluid" id="fotoproyecto"/>
+                </td>
+                <td class="text-white" *ngIf="isLogged">
+                    <button class="btn btn-light" routerLink="/editproyect/{{Proyects.id}}">
+                        <i class="bi bi-pencil"></i> Editar
+                    </button>
+                </td>
+                <td class="text-white" *ngIf="isLogged">
+                    <button class="btn btn-danger" (click)="delete(Proyects.id)">
+                    <i class="bi bi-trash-fill"></i> Borrar
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
