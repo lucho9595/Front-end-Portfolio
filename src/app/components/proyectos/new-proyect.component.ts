@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Proyects } from 'src/app/model/proyects';
 import { ImageServiceProyects } from 'src/app/service/image-service-proyects.service';
 import { ProyectsService } from 'src/app/service/proyects-service';
@@ -17,14 +17,14 @@ export class NewProyectComponent implements OnInit {
 
   constructor(private proyectService: ProyectsService,
     private router: Router,
-    public imageService: ImageServiceProyects,
-    private activateRouter: ActivatedRoute) { }
+    public imageService: ImageServiceProyects,) { }
 
   ngOnInit(): void {
   }
 
   onCreate(): void {
-    const proyect = new Proyects(this.nombre, this.description, this.img_proyect);
+    const save = this.img_proyect = this.imageService.url
+    const proyect = new Proyects(this.nombre, this.description, save);
     this.proyectService.save(proyect).subscribe({
       next: (_data) => {
         alert('Proyecto agregado');
@@ -35,11 +35,12 @@ export class NewProyectComponent implements OnInit {
         this.router.navigate(['']);
       }
     });
+    console.log(proyect)
+    console.log(save)
   }
 
-  uploadImage($event: any) {
-    const id = this.activateRouter.snapshot.params['id'];
-    const name = "Proyecto_" + id;
+  subirImagen($event: any) {
+    const name = "Proyecto_";
     this.imageService.uploadImage($event, name);
   }
 }
