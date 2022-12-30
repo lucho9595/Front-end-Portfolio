@@ -25,11 +25,11 @@ export class EducationComponent implements OnInit {
   }
 
   cargarEducation(): void {
-    this.educationS.lista().subscribe(
-      data => {
+    this.educationS.lista().subscribe({
+      next:data => {
         this.education = data
       }
-    )
+    })
   }
 
   delete(id?: number) {

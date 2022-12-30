@@ -11,11 +11,12 @@ import { TokenService } from 'src/app/service/token.service';
 export class ProyectosComponent implements OnInit {
   proyect: Proyects[] = [];
 
-  constructor(public proyectService: ProyectsService, private tokenService: TokenService) { }
+  constructor(private proyectService: ProyectsService, private tokenService: TokenService) { }
+
   isLogged = false;
 
   ngOnInit(): void {
-    this.cargarProyect();
+    this.cargarProyecto();
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
@@ -23,8 +24,9 @@ export class ProyectosComponent implements OnInit {
     }
   }
 
-  cargarProyect(): void {
-    this.proyectService.lista().subscribe(data =>{
+  cargarProyecto(): void {
+    this.proyectService.lista().subscribe(
+      data =>{
       this.proyect= data
     })
   }
@@ -35,7 +37,7 @@ export class ProyectosComponent implements OnInit {
       if (respuesta == true) {
         this.proyectService.delete(id).subscribe(
           data => {
-            this.cargarProyect();
+            this.cargarProyecto();
             alert("Experiencia Borrada")
           }, err => {
             alert("No se pudo borrar la experiencia");

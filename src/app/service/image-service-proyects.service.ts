@@ -8,14 +8,10 @@ export class ImageServiceProyects {
 
   constructor(private storage: Storage) { }
 
-  ngOnInit(){
-    this.getImages();
-  }
-
   public uploadImage($event: any, name: string) {
     const file = $event.target.files[0];
     console.log(file);
-    const imgRef = ref(this.storage, `imagen-Proyects/${file.name}`)
+    const imgRef = ref(this.storage, `imagen-Proyects/${name}`)
     uploadBytes(imgRef, file)
       .then(_response => { this.getImages() })
       .catch(error => console.log(error))
@@ -34,4 +30,4 @@ export class ImageServiceProyects {
       })
       .catch(error => console.log(error))
   }
-}
+};
