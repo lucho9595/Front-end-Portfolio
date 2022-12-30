@@ -15,7 +15,7 @@ export class ProyectosComponent implements OnInit {
   isLogged = false;
 
   ngOnInit(): void {
-    this.cargarProyect()
+    this.cargarProyect();
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
@@ -23,7 +23,7 @@ export class ProyectosComponent implements OnInit {
     }
   }
 
-  cargarProyect(){
+  cargarProyect(): void {
     this.proyectService.lista().subscribe(data =>{
       this.proyect= data
     })

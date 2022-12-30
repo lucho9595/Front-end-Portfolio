@@ -55,23 +55,23 @@
     </div> -->
     <table class="table">
         <tbody>
-            <tr *ngFor="let Proyects of proyect">
+            <tr *ngFor="let proyects of proyect">
                 <td class="text-white">
-                    <h3>{{Proyects.nombre}}</h3>
+                    <h3>{{proyects.nombre}}</h3>
                 </td>
                 <td class="text-white">
-                    {{Proyects.description}}
+                    {{proyects.description}}
                 </td>
                 <td>
-                    <img src={{Proyects.img_proyect}}  alt="" class="img-fluid" id="fotoproyecto"/>
+                    <img src={{proyects.img_proyect}}  alt="" class="img-fluid" id="fotoproyecto"/>
                 </td>
                 <td class="text-white" *ngIf="isLogged">
-                    <button class="btn btn-light" routerLink="/editproyect/{{Proyects.id}}">
+                    <button class="btn btn-light" routerLink="/editproyect/{{proyects.id}}">
                         <i class="bi bi-pencil"></i> Editar
                     </button>
                 </td>
                 <td class="text-white" *ngIf="isLogged">
-                    <button class="btn btn-danger" (click)="delete(Proyects.id)">
+                    <button class="btn btn-danger" (click)="delete(proyects.id)">
                     <i class="bi bi-trash-fill"></i> Borrar
                     </button>
                 </td>
