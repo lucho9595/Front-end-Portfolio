@@ -10,7 +10,7 @@ import { ProyectsService } from 'src/app/service/proyects-service';
   styleUrls: ['./edit-proyect.component.css']
 })
 export class EditProyectComponent implements OnInit {
-  proyect: Proyects = null;
+  proyects: Proyects = null;
 
   constructor(private activateRouter: ActivatedRoute, 
     private proyectService: ProyectsService, 
@@ -21,7 +21,7 @@ export class EditProyectComponent implements OnInit {
       const id = this.activateRouter.snapshot.params['id'];
       this.proyectService.detail(id).subscribe(
         data => {
-          this.proyect = data;
+          this.proyects = data;
         }, err => {
           alert("Error al modificar");
           this.router.navigate(['']);
@@ -31,8 +31,8 @@ export class EditProyectComponent implements OnInit {
 
     onUpdate(): void {
       const id = this.activateRouter.snapshot.params['id'];
-      this.proyect.img_proyect = this.imageService.url
-      this.proyectService.update(this.proyect, id).subscribe(
+      this.proyects.img_proyect = this.imageService.url
+      this.proyectService.update(this.proyects, id).subscribe(
         data => {
           this.router.navigate(['']);
           alert("Persona Editada")

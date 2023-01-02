@@ -24,8 +24,8 @@ export class NewProyectComponent implements OnInit {
 
   onCreate(): void {
     const save = this.img_proyect = this.imageService.url
-    const proyectos = new Proyects(this.nombre, this.description, save);
-    this.proyectService.save(proyectos).subscribe({
+    const proyects = new Proyects(this.nombre, this.description, save);
+    this.proyectService.save(proyects).subscribe({
       next: (_data) => {
         alert('Proyecto agregado');
         this.router.navigate(['']);
@@ -35,7 +35,7 @@ export class NewProyectComponent implements OnInit {
         this.router.navigate(['']);
       }
     });
-    console.log(proyectos)
+    console.log(proyects)
     console.log(save)
   }
 
