@@ -11,6 +11,7 @@ import { SkillService } from 'src/app/service/skills.service';
 export class NewSkillComponent implements OnInit {
   nombre: string;
   porcentaje: number;
+  img: string;
 
   constructor(private skillS: SkillService, private router: Router) { }
 
@@ -18,7 +19,7 @@ export class NewSkillComponent implements OnInit {
   }
 
   onCreate(): void{
-    const skill = new Skill(this.nombre, this.porcentaje);
+    const skill = new Skill(this.nombre, this.porcentaje, this.img);
     this.skillS.save(skill).subscribe(
       data => {
         alert("Skill creada correctamente");

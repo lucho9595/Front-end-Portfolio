@@ -12,7 +12,7 @@ import { ProyectsService } from 'src/app/service/proyects-service';
 export class NewProyectComponent implements OnInit {
   nombre: string ;
   description: string ;
-  img_proyect: string ;
+  img: string ;
 
 
   constructor(private proyectService: ProyectsService,
@@ -23,7 +23,7 @@ export class NewProyectComponent implements OnInit {
   }
 
   onCreate(): void {
-    const save = this.img_proyect = this.imageService.url
+    const save = this.img = this.imageService.url
     const proyects = new Proyects(this.nombre, this.description, save);
     this.proyectService.save(proyects).subscribe({
       next: (_data) => {

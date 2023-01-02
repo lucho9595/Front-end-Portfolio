@@ -15,7 +15,7 @@
                     {{proyects?.description}}
                 </td>
                 <td>
-                    <img [src]='proyects?.img_proyect'  alt="" class="img-fluid" id="fotoproyecto" />
+                    <img [src]='proyects?.img'  alt="" class="img-fluid" id="fotoproyecto" />
                 </td>
                 <td class="text-white" *ngIf="isLogged">
                     <button class="btn btn-light" routerLink="/editproyect/{{proyects.id}}">
