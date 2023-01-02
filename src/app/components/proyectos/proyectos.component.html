@@ -5,65 +5,17 @@
             Nuevo Proyecto
         </button>
     </div>
-    <!-- <div class="container">
-        <div class="col-sm-12 col-md-7 col-lg-7 part1">
-            <h2 class="text-white">Ticket Henry</h2>
-            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dignissimos et atque magni,
-                vero minima
-                repudiandae ipsa possimus veritatis expedita voluptates
-                quisquam consectetur molestiae deleniti dolore
-                ea eos ipsam distinctio porro?</p>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 part2" style="width: 400px;">
-            <a href="https://ecommerce-pg-nine.vercel.app/" target="_blank">
-                <img src="../../../assets/Proyects/Sin título.png" class="img-fluid img-proyecto">
-            </a>
-        </div>
-    </div>
-    <div class="container">
-        <div class="col-sm-12 col-md-7 col-lg-7 part1">
-            <h2 class="text-white">Videogames app</h2>
-            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dignissimos et atque magni,
-                vero minima
-                repudiandae ipsa possimus veritatis expedita voluptates
-                quisquam consectetur molestiae deleniti dolore
-                ea eos ipsam distinctio porro?</p>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 part2" style="width: 400px;">
-            <a href="https://proyect-videogame.vercel.app/" target="_blank">
-                <img src="../../../assets/Proyects/Sin título 2.png" class="img-fluid img-proyecto">
-            </a>
-        </div>
-    </div>
-    <div class="container">
-        <div class="col-sm-12 col-md-7 col-lg-7 part1">
-            <h2 class="text-white">Poke app</h2>
-            <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dignissimos et atque magni,
-                vero minima
-                repudiandae ipsa possimus veritatis expedita voluptates
-                quisquam consectetur molestiae deleniti dolore
-                ea eos ipsam distinctio porro?</p>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 part2" style="width: 400px;">
-            <a href="https://proyect-pokemon.vercel.app/" target="_blank">
-                <img src="../../../assets/Proyects/Sin título 3.png" class="img-fluid img-proyecto">
-            </a>
-        </div>
-    </div> -->
     <table class="table">
         <tbody>
             <tr *ngFor="let proyects of proyect">
                 <td class="text-white">
-                    <h3>{{proyects.nombre}}</h3>
+                    <h3>{{proyects?.nombre}}</h3>
                 </td>
                 <td class="text-white">
-                    {{proyects.description}}
+                    {{proyects?.description}}
                 </td>
                 <td>
-                    <img src={{proyects.img_proyect}}  alt="" class="img-fluid" id="fotoproyecto"/>
+                    <img [src]='proyects?.img_proyect'  alt="" class="img-fluid" id="fotoproyecto" />
                 </td>
                 <td class="text-white" *ngIf="isLogged">
                     <button class="btn btn-light" routerLink="/editproyect/{{proyects.id}}">

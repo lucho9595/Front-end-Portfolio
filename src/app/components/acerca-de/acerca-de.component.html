@@ -3,17 +3,17 @@
         <i class="bi bi-pencil"></i>
     </button>
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src={{persona.img}} alt="" class="img-fluid" id="fotoperfil">
+        <img [src]='persona?.img' alt="" class="img-fluid" id="fotoperfil">
     </div>
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <p class="text-white text-center mt-5"><strong>{{persona.nombre}} {{persona.apellido}}</strong></p>
+        <p class="text-white text-center mt-5"><strong>{{persona?.nombre}} {{persona?.apellido}}</strong></p>
         <p class="text-white text-center">Full-Stack Developer</p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
         <span>
             <h1 class="text-white text-center">Acerca de mí</h1>
             <p class="text-white text-center">
-                {{persona.description}}
+                {{persona?.description}}
             </p>
         </span>
     </div>
