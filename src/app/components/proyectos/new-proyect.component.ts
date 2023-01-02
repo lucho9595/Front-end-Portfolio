@@ -10,9 +10,9 @@ import { ProyectsService } from 'src/app/service/proyects-service';
   styleUrls: ['./new-proyect.component.css']
 })
 export class NewProyectComponent implements OnInit {
-  nombre: string = '';
-  description: string = '';
-  img_proyect: string = '';
+  nombre: string ;
+  description: string ;
+  img_proyect: string ;
 
 
   constructor(private proyectService: ProyectsService,
@@ -24,8 +24,8 @@ export class NewProyectComponent implements OnInit {
 
   onCreate(): void {
     const save = this.img_proyect = this.imageService.url
-    const proyect = new Proyects(this.nombre, this.description, save);
-    this.proyectService.save(proyect).subscribe({
+    const proyectos = new Proyects(this.nombre, this.description, save);
+    this.proyectService.save(proyectos).subscribe({
       next: (_data) => {
         alert('Proyecto agregado');
         this.router.navigate(['']);
@@ -35,7 +35,7 @@ export class NewProyectComponent implements OnInit {
         this.router.navigate(['']);
       }
     });
-    console.log(proyect)
+    console.log(proyectos)
     console.log(save)
   }
 
