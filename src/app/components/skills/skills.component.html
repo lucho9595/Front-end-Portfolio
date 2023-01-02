@@ -7,11 +7,10 @@
         <circle-progress 
         [percent]="(skill?.porcentaje)" 
         [radius]="90" 
-        [imageSrc]="(skill?.img)" 
-        [title]="(skill?.nombre)"
+        [imageSrc]="(skill?.img)"
         [titleColor]="'#FFFFFF'"
-        [showTitle]="true" 
-        [showImage]="false" 
+        [showTitle]="false" 
+        [showImage]="true" 
         [imageHeight]="70" 
         [imageWidth]="70" 
         [showUnits]="false"
@@ -23,6 +22,7 @@
         [animation]="true" 
         [animationDuration]="600">
         </circle-progress>
+        <p>{{skill?.nombre}}</p>
 
         <div>
             <td *ngIf="isLogged">
