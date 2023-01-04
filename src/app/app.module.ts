@@ -32,6 +32,7 @@ import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { EditProyectComponent } from './components/proyectos/edit-proyect/edit-proyect.component';
 import { NewProyectComponent } from './components/proyectos/new-proyect.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,8 @@ import { NewProyectComponent } from './components/proyectos/new-proyect.componen
     NewSkillComponent,
     EditAcercadeComponent,
     EditProyectComponent,
-    NewProyectComponent
+    NewProyectComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
