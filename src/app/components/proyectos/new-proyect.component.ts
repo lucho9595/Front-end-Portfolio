@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Proyects } from 'src/app/model/proyects';
 import { ImageServiceProyects } from 'src/app/service/image-service-proyects.service';
 import { ProyectsService } from 'src/app/service/proyects-service';
@@ -10,20 +10,23 @@ import { ProyectsService } from 'src/app/service/proyects-service';
   styleUrls: ['./new-proyect.component.css']
 })
 export class NewProyectComponent implements OnInit {
-  nombre: string ;
-  description: string ;
-  img: string ;
+  nombre: string;
+  description: string;
+  img: string;
 
 
-  constructor(private proyectService: ProyectsService,
+  constructor(
+    private proyectService: ProyectsService,
     private router: Router,
-    public imageService: ImageServiceProyects,) { }
+    public imageService: ImageServiceProyects,
+    private activateRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
 
   onCreate(): void {
     const save = this.img = this.imageService.url
+    console.log(save)
     const proyects = new Proyects(this.nombre, this.description, save);
     this.proyectService.save(proyects).subscribe({
       next: (_data) => {
@@ -35,12 +38,9 @@ export class NewProyectComponent implements OnInit {
         this.router.navigate(['']);
       }
     });
-    console.log(proyects)
-    console.log(save)
   }
 
-  subirImagen($event: any) {
-    const name = "Proyecto_";
-    this.imageService.uploadImage($event, name);
+  uploadImage($event: any) {
+    this.imageService.uploadImage($event);
   }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Storage, ref, uploadBytes, getDownloadURL, list } from '@angular/fire/storage';
+import { Storage, ref, uploadBytes, getDownloadURL, listAll } from '@angular/fire/storage';
 @Injectable({
   providedIn: 'root'
 })
@@ -8,24 +8,25 @@ export class ImageServiceProyects {
 
   constructor(private storage: Storage) { }
 
-  public uploadImage($event: any, name: string) {
+  public uploadImage($event: any) {
     const file = $event.target.files[0];
     console.log(file);
-    const imgRef = ref(this.storage, `imagen-Proyects/` + name)
+    const imgRef = ref(this.storage, `imagen-Proyects/${file.name}`)
     uploadBytes(imgRef, file)
-      .then(_response => { this.getImages() })
+      .then( _response => 
+        getDownloadURL(imgRef)
+        .then(_url => this.url = _url)
+        )
       .catch(error => console.log(error))
   }
 
   getImages() {
     const imageRef = ref(this.storage, 'imagen-Proyects')
-    console.log(imageRef)
-    list(imageRef)
+    listAll(imageRef)
       .then(async response => {
-        console.log(response.items)
         for (let item of response.items) {
-          this.url = await getDownloadURL(item);
-          console.log("La url es: " + this.url);
+          const url = await getDownloadURL(item);
+          console.log("la url es: " + url)
         }
       })
       .catch(error => console.log(error))

@@ -44,9 +44,7 @@ export class EditProyectComponent implements OnInit {
     }
   
     uploadImage($event: any){
-      const id = this.activateRouter.snapshot.params['id'];
-      const name = "Proyecto_" + id;
-      this.imageService.uploadImage($event, name);
+      this.imageService.uploadImage($event);
     }
 
 }
