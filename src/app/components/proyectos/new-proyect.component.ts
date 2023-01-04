@@ -13,13 +13,13 @@ export class NewProyectComponent implements OnInit {
   nombre: string;
   description: string;
   img: string;
+  url_imagen: string;
 
 
   constructor(
     private proyectService: ProyectsService,
     private router: Router,
-    public imageService: ImageServiceProyects,
-    private activateRouter: ActivatedRoute) { }
+    public imageService: ImageServiceProyects,) { }
 
   ngOnInit(): void {
   }
@@ -27,7 +27,7 @@ export class NewProyectComponent implements OnInit {
   onCreate(): void {
     const save = this.img = this.imageService.url
     console.log(save)
-    const proyects = new Proyects(this.nombre, this.description, save);
+    const proyects = new Proyects(this.nombre, this.description, save, this.url_imagen);
     this.proyectService.save(proyects).subscribe({
       next: (_data) => {
         alert('Proyecto agregado');
