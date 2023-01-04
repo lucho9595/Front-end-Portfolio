@@ -39,13 +39,13 @@ export class ProyectosComponent implements OnInit {
         this.proyectService.delete(id).subscribe(
           data => {
             this.cargarProyecto();
-            alert("Experiencia Borrada")
+            alert("Proyecto Borrada")
           }, err => {
-            alert("No se pudo borrar la experiencia");
+            alert("No se pudo borrar la Proyecto");
           }
         )
       } else {
-        alert("No se borro la experiencia");
+        alert("No se borro la Proyecto");
       }
     }
   }

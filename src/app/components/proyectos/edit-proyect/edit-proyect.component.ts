@@ -35,9 +35,9 @@ export class EditProyectComponent implements OnInit {
       this.proyectService.update(this.proyects, id).subscribe(
         data => {
           this.router.navigate(['']);
-          alert("Persona Editada")
+          alert("Proyecto Editado")
         }, err => {
-          alert("Error al modificar Persona");
+          alert("Error al modificar proyecto");
           this.router.navigate(['']);
         }
       )
