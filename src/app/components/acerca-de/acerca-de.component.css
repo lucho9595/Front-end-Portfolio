@@ -3,7 +3,9 @@ div{
 }
 
 #btn-edit{
-    background-color: aqua;
+    width: 100px;
+    height: max-content;
+    margin-block: auto;
 }
 
 /*Foto de perfil*/
