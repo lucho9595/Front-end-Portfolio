@@ -2,6 +2,10 @@ div{
     background-color: rgb(12, 2, 74);
 }
 
+#btn-edit{
+    background-color: aqua;
+}
+
 /*Foto de perfil*/
 /*desktop*/
 @media (min-width: 576px){

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Skill } from 'src/app/model/skills';
-import { ImageService } from 'src/app/service/image.service';
+import { ImageServiceProyects } from 'src/app/service/image-service-proyects.service';
 import { SkillService } from 'src/app/service/skills.service';
 
 @Component({
@@ -10,22 +10,22 @@ import { SkillService } from 'src/app/service/skills.service';
   styleUrls: ['./new-skills.component.css']
 })
 export class NewSkillComponent implements OnInit {
-  nombre: string = '';
+  nombre: string;
   porcentaje: number;
-  img: string = '';
+  img: string;
 
-  constructor(private skillS: SkillService, private router: Router, public imageService: ImageService) { }
+  constructor(private skillS: SkillService, private router: Router, public imageService: ImageServiceProyects) { }
 
   ngOnInit(): void {
-   
   }
 
   onCreate(): void{
-    const skill = new Skill(this.nombre, this.porcentaje, this.img);
-    console.log(skill)
+    const save = this.img = this.imageService.url
+    console.log(save)
+    const skill = new Skill(this.nombre, this.porcentaje, save);
     this.skillS.save(skill).subscribe(
       data => {
-        alert("Skill creada correctamente");
+        alert("Skill creada");
         this.router.navigate(['']);
       }, err =>{
         alert("Fallo al añadir la skill");
@@ -35,8 +35,7 @@ export class NewSkillComponent implements OnInit {
     console.log(this.skillS)
   }
 
-  subirImagen($event: any) {
-    const name = "Proyecto_";
-    this.imageService.uploadImage($event, name);
-}
+  uploadImg($event: any) {
+    this.imageService.uploadImage($event);
+  }
 }
