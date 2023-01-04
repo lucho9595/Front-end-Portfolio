@@ -6,6 +6,7 @@ import { NewEducationComponent } from './components/education/new-education.comp
 import { EditExperiencieComponent } from './components/experience/edit-experiencie/edit-experiencie.component';
 import { NewExperiencieComponent } from './components/experience/new-experiencie.component';
 import { HomeComponent } from './components/home/home.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { EditProyectComponent } from './components/proyectos/edit-proyect/edit-proyect.component';
@@ -14,7 +15,8 @@ import { EditSkillComponent } from './components/skills/edit-skills/edit-skills.
 import { NewSkillComponent } from './components/skills/new-skills.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: LandingPageComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'nuevaexp', component: NewExperiencieComponent},
   {path: 'editexp/:id', component: EditExperiencieComponent},

@@ -33,6 +33,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { EditProyectComponent } from './components/proyectos/edit-proyect/edit-proyect.component';
 import { NewProyectComponent } from './components/proyectos/new-proyect.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +58,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     EditAcercadeComponent,
     EditProyectComponent,
     NewProyectComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
