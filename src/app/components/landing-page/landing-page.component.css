@@ -1,0 +1,28 @@
+#hipervinculos{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#logo{
+    height: 20px;
+    width: 10px;
+}
+
+html,
+body
+{
+    height: 100%;
+    width:  100%;
+    margin: 0;
+    padding: 0;
+    color:  #000;
+}
+
+.navbar,
+.navbar-brand
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    background-color: #000;
+}
