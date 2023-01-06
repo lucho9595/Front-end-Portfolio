@@ -9,3 +9,26 @@ div {
 .navbar .navbar-toggler{
     border: 1px solid white;
 }
+
+@media (min-width: 992px) {
+    #button{
+        display: flex;
+        flex-direction: row;
+        margin-right: 20px;
+    }
+    
+    #back{
+        margin-left: 7px;
+    }
+}
+
+@media (max-width: 991px){
+    #button{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #back{
+        margin-top: 9px;
+    }
+}
