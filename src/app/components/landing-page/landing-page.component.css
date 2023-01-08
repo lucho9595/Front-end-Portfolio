@@ -1,8 +1,25 @@
-body {
-    min-height: 100vh;
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    margin: 0;
+  }
+
+.row {
+    height: 100vh;
     background-image: url("../../../assets/background.png");
     background-position: center center;
-    background-size: 100% 100%;
+    background-size: cover;
+}
+
+#navbar {
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 #size {
@@ -10,9 +27,28 @@ body {
     height: 90px;
 }
 
-#title {
+#title2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 125px;
+    transition: 0.5s;
+}
+
+#title2:hover {
     color: aliceblue;
-    padding: 120px;
+}
+
+
+#btn {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 96px;
+    flex-direction: column;
 }
 
 .navbar .navbar-toggler-icon {
@@ -23,28 +59,12 @@ body {
     border: 1px solid white;
 }
 
-@media(min-width: 700px) {
-    body {
-        min-height: 100vh;
-        background-image: url("../../../assets/background.png");
-        background-position: center center;
+
+@media(max-width: 1229px) {
+    .row {
         background-size: 100% 100%;
-    }
-
-    #title2 {
-        position: fixed;
-        text-align: center;
-    }
-}
-
-@media(min-width: 545px) {
-    body {
-        background-image: url("../../../assets/background.png");
-        background-position: center center;
-        min-width: 100vw;
-        min-height: 100vh;
-    }
-    #title2{
-        position: fixed;
+        width: 100%;
+        background-repeat: no-repeat;
+        height: 100vh;
     }
 }
