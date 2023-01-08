@@ -34,6 +34,7 @@ import { EditProyectComponent } from './components/proyectos/edit-proyect/edit-p
 import { NewProyectComponent } from './components/proyectos/new-proyect.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { ContactComponent } from './components/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +60,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
     EditProyectComponent,
     NewProyectComponent,
     PageNotFoundComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
