@@ -13,6 +13,7 @@ import { EditProyectComponent } from './components/proyectos/edit-proyect/edit-p
 import { NewProyectComponent } from './components/proyectos/new-proyect.component';
 import { EditSkillComponent } from './components/skills/edit-skills/edit-skills.component';
 import { NewSkillComponent } from './components/skills/new-skills.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'editaracercade/:id', component: EditAcercadeComponent},
   {path: 'newproyect', component: NewProyectComponent},
   {path: 'editproyect/:id', component: EditProyectComponent},
+  {path: 'contact', component: ContactComponent},
   {path: '**', component: PageNotFoundComponent},
 ];
 
