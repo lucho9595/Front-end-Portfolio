@@ -11,6 +11,8 @@
     ],
     "no-inline-styles": "off",
     "disown-opener": "off",
-    "button-type": "off"
+    "button-type": "off",
+    "css-prefix-order": "off",
+    "axe/language": "off"
   }
 }
