@@ -14,6 +14,7 @@
     "button-type": "off",
     "css-prefix-order": "off",
     "axe/language": "off",
-    "axe/parsing": "off"
+    "axe/parsing": "off",
+    "axe/name-role-value": "off"
   }
 }

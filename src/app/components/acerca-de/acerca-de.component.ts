@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/service/token.service';
 export class AcercaDeComponent implements OnInit {
   persona: persona = null;
 
-  constructor(public personaService: PersonaService, private tokenService: TokenService) { }
+  constructor(public personaService: PersonaService, private tokenService: TokenService) {  }
   isLogged = false;
   //suscribe lo que hace es escuchar al observable, y en el caso que se realize un cambio
   //este por medio de codigos, genera el cambio. Esta al pendiente
@@ -24,9 +24,9 @@ export class AcercaDeComponent implements OnInit {
     }
   }
 
-  cargarPersona(){
-    this.personaService.detail(1).subscribe(data =>{
-      this.persona= data
+  cargarPersona() {
+    this.personaService.detail(1).subscribe(data => {
+      this.persona = data;
     })
   }
 

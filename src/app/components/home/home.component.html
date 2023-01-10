@@ -1,9 +1,16 @@
-<div class="row">
-<app-header></app-header>
-<app-acerca-de></app-acerca-de>
-<app-experience></app-experience>
-<app-education></app-education>
-<app-skills></app-skills>
-<app-proyectos></app-proyectos>
-<app-footer></app-footer>
+<div class="loading" *ngIf="!load">
+    <div class="spinner ">
+        <img src="../../../assets/loading.png!bw700" />
+    </div>
+</div>
+
+
+<div class="row" *ngIf="load">
+    <app-header></app-header>
+    <app-acerca-de></app-acerca-de>
+    <app-experience></app-experience>
+    <app-education></app-education>
+    <app-skills></app-skills>
+    <app-proyectos></app-proyectos>
+    <app-footer></app-footer>
 </div>
