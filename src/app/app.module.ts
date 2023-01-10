@@ -14,7 +14,7 @@ import { EducationComponent } from './components/education/education.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FooterComponent } from './components/footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //aca hacemos la conexion con el Backend
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
@@ -69,6 +69,7 @@ import { ContactComponent } from './components/contact/contact.component';
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage()),
   ],
