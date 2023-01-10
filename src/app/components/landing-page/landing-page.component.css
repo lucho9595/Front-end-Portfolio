@@ -27,17 +27,37 @@ html {
     height: 90px;
 }
 
+.container{
+    display: flex;
+    position: relative;
+    margin-left: 190px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #ffffff80;
+    width: 850px;
+    height: 550px;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+#title{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
 #title2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
     margin-bottom: 125px;
-    transition: 0.5s;
+    transition: .5s;
+    color: #000;
 }
 
 #title2:hover {
-    color: aliceblue;
+    color: rgb(235, 194, 14);
 }
 
 
@@ -49,6 +69,10 @@ html {
     position: relative;
     margin-bottom: 96px;
     flex-direction: column;
+}
+
+#btn:hover{
+    transform: scale(1,2);
 }
 
 .navbar .navbar-toggler-icon {
