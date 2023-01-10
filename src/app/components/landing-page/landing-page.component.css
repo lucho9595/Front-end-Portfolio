@@ -27,7 +27,7 @@ html {
     height: 90px;
 }
 
-.container{
+#container{
     display: flex;
     position: relative;
     margin-left: 190px;
@@ -58,6 +58,7 @@ html {
 
 #title2:hover {
     color: rgb(235, 194, 14);
+    transform: scale(2, 2);
 }
 
 
@@ -71,12 +72,8 @@ html {
     flex-direction: column;
 }
 
-#boton{
-    display:flex;
-}
-
 #boton:hover{
-    transform: scale(1,2);
+    transform: scale(2, 2);
 }
 
 .navbar .navbar-toggler-icon {
