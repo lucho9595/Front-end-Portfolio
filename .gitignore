@@ -19,4 +19,4 @@ node_modules
 .runtimeconfig.json
 
 #ignorar angular/cache
-.angular/cache
+.angular/cache/14.2.5
