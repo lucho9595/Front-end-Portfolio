@@ -15,10 +15,10 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //aca hacemos la conexion con el Backend
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { InterceptorService, interceptorProvider } from './service/interceptor-service';
+import { interceptorProvider } from './service/interceptor-service';
 import { NewExperiencieComponent } from './components/experience/new-experiencie.component';
 import { EditExperiencieComponent } from './components/experience/edit-experiencie/edit-experiencie.component';
 import { NewEducationComponent } from './components/education/new-education.component';
@@ -34,6 +34,8 @@ import { NewProyectComponent } from './components/proyectos/new-proyect.componen
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { LoadingInterceptor } from './components/spinner/loading.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +62,7 @@ import { ContactComponent } from './components/contact/contact.component';
     PageNotFoundComponent,
     LandingPageComponent,
     ContactComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,6 +76,9 @@ import { ContactComponent } from './components/contact/contact.component';
   ],
   providers: [
     interceptorProvider,
+    {provide: HTTP_INTERCEPTORS, 
+    useClass: LoadingInterceptor, 
+    multi: true},
   ],
   bootstrap: [AppComponent]
 })
