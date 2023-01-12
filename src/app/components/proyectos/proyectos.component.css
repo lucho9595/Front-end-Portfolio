@@ -9,10 +9,17 @@
     width: auto;
 }
 
-/* .part1, .part2{
-    display: inline-block;
-    text-align: justify;
-} */
+#titleProyect{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#proyect{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    width: 350px;
+}
 
 .img-proyecto:hover{
     box-shadow: 5px 5px 20px white;

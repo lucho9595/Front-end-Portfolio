@@ -1,26 +1,16 @@
 <div class="row">
-    <h1 class="text-center text-white">Hard & Soft Skills</h1>
+    <div id="titleSkill">
+        <h1 class="text-center text-white" id="skill">Hard & Soft Skills</h1>
+    </div>
     <div class="col-lg-2">
-        <button type="button" routerLink="/newskill" class="btn btn-outline-warning btn-rounded" *ngIf="isLogged">Nueva Skill</button>
+        <button type="button" routerLink="/newskill" class="btn btn-outline-warning btn-rounded" *ngIf="isLogged">Nueva
+            Skill</button>
     </div>
     <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
-        <circle-progress 
-        [percent]="(skill?.porcentaje)" 
-        [radius]="90" 
-        [imageSrc]="(skill?.img)"
-        [titleColor]="'#FFFFFF'"
-        [showTitle]="false" 
-        [showImage]="true" 
-        [imageHeight]="70" 
-        [imageWidth]="70" 
-        [showUnits]="false"
-        [showSubtitle]="false" 
-        [outerStrokeWidth]="16" 
-        [innerStrokeWidth]="2" 
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'" 
-        [animation]="true" 
-        [animationDuration]="600">
+        <circle-progress [percent]="(skill?.porcentaje)" [radius]="90" [imageSrc]="(skill?.img)"
+            [titleColor]="'#FFFFFF'" [showTitle]="false" [showImage]="true" [imageHeight]="70" [imageWidth]="70"
+            [showUnits]="false" [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="600">
         </circle-progress>
         <p class="text-white">{{skill?.nombre}}</p>
 
@@ -35,6 +25,6 @@
                     <i class="bi bi-trash-fill"></i></button>
             </td>
         </div>
-        
+
     </div>
 </div>
