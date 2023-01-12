@@ -9,17 +9,17 @@
     </div>
     <div class="col-lg-1"></div>
     <div class="col-lg-11">
-        <table class="mx-auto table">
-            <div>
+        <table class="table">
+            <tbody>
                 <div *ngFor="let Education of education">
                     <div id="description" class="mx-auto row">
-                    <div class="text-white col">
-                        <h3 id="nombreE">{{Education?.nombreE}}</h3>
+                        <div class="text-white col">
+                            <h3>{{Education?.nombreE}}</h3>
+                        </div>
+                        <div class="text-white text-center col">
+                            {{Education?.descripcionE}}
+                        </div>
                     </div>
-                    <div class="text-white text-center col">
-                        {{Education?.descripcionE}}
-                    </div>
-                </div>
                     <div id="botons" class="mx-auto">
                         <div class="text-white mx-auto" *ngIf="isLogged">
                             <button class="btn btn-light" routerLink="/editedu/{{Education.id}}">
@@ -33,7 +33,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </tbody>
         </table>
     </div>
 </div>
