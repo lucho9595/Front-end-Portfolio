@@ -6,9 +6,21 @@ div{
     background-color: rgb(12, 2, 74);
     background-size: 100% 100%;
     background-position: center center;
-
 }
 
 h1,h3{
     display: inline;
+}
+
+@media (max-width: 470px){
+    #newExp{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #botons{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
