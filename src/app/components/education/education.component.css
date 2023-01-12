@@ -22,6 +22,12 @@ h3 {
     width: 350px;
 }
 
+#description{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 
 @media (max-width: 473px) {
     #newEducation {

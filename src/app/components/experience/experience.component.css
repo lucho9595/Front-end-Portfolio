@@ -1,37 +1,44 @@
-.row{
+.row {
     padding: 20px;
 }
 
-div{
+div {
     background-color: rgb(12, 2, 74);
     background-size: 100% 100%;
     background-position: center center;
 }
 
-h1,h3{
+h1,
+h3 {
     display: inline;
 }
 
-#titleExp{
+#titleExp {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#exp{
+#exp {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 30px;
     width: 350px;
 }
 
-@media (max-width: 470px){
-    #newExp{
+#descriptions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media (max-width: 470px) {
+    #newExp {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    #botons{
+    #botons {
         display: flex;
         flex-wrap: wrap;
     }
