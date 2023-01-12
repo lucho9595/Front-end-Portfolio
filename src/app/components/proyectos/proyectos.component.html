@@ -7,32 +7,32 @@
             Nuevo Proyecto
         </button>
     </div>
-    <table class="table">
-        <div>
-            <div *ngFor="let proyects of proyects">
-                <div class="text-white">
+    <div>
+        <div *ngFor="let proyects of proyects">
+            <div class="row" id="contain">
+                <div class="text-white col">
                     <h3>{{proyects?.nombre}}</h3>
                 </div>
-                <div class="text-white">
+                <div class="text-white col">
                     {{proyects?.description}}
                 </div>
-                <div>
-                    <a href={{proyects.url_imagen}} target="_blank"><img [src]='proyects?.img' alt="" class="img-fluid"
-                            id="fotoproyecto" /></a>
+                <div class="col">
+                    <a href={{proyects.url_imagen}} target="_blank">
+                    <img [src]='proyects?.img' alt="" class="img-fluid" id="fotoProyecto" width="530px" /></a>
                 </div>
-                <div class="mx-auto">
-                    <div id="botons" class="text-white mx-auto" *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editproyect/{{proyects.id}}">
-                            <i class="bi bi-pencil"></i> Editar
-                        </button>
-                    </div>
-                    <div class="text-white" *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(proyects.id)">
-                            <i class="bi bi-trash-fill"></i> Borrar
-                        </button>
-                    </div>
+            </div>
+            <div class="mx-auto">
+                <div id="botons" class="text-white mx-auto" *ngIf="isLogged">
+                    <button class="btn btn-light" routerLink="/editproyect/{{proyects.id}}">
+                        <i class="bi bi-pencil"></i> Editar
+                    </button>
+                </div>
+                <div class="text-white" *ngIf="isLogged">
+                    <button class="btn btn-danger" (click)="delete(proyects.id)">
+                        <i class="bi bi-trash-fill"></i> Borrar
+                    </button>
                 </div>
             </div>
         </div>
-    </table>
+    </div>
 </div>

@@ -21,6 +21,14 @@
     width: 350px;
 }
 
-.img-proyecto:hover{
+#fotoProyecto:hover{
     box-shadow: 5px 5px 20px white;
+}
+
+#contain{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
