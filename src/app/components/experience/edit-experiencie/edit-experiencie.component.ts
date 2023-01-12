@@ -20,7 +20,7 @@ export class EditExperiencieComponent implements OnInit {
         this.expLab = data;
       }, error: err => {
         alert("Error al modificar experiencia");
-        this.router.navigate(['']);
+        this.router.navigate(['/home']);
       }
     })
   }
@@ -29,11 +29,11 @@ export class EditExperiencieComponent implements OnInit {
     const id = this.activateRouter.snapshot.params['id'];
     this.sExperiencie.update(id, this.expLab).subscribe(
       data => {
-        this.router.navigate(['']);
+        this.router.navigate(['/home']);
         alert("Experiencia Editada")
       }, err => {
         alert("Error al modificar experiencia");
-        this.router.navigate(['']);
+        this.router.navigate(['/home']);
       }
     )
   }

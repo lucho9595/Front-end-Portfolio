@@ -26,10 +26,10 @@ export class NewSkillComponent implements OnInit {
     this.skillS.save(skill).subscribe(
       data => {
         alert("Skill creada");
-        this.router.navigate(['']);
+        this.router.navigate(['/home']);
       }, err =>{
         alert("Fallo al añadir la skill");
-        this.router.navigate(['']);
+        this.router.navigate(['/home']);
       }
     )
     console.log(this.skillS)
