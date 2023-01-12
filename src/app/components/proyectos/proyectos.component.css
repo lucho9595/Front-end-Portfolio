@@ -1,34 +1,47 @@
-.row{
+.row {
     background-color: rgb(12, 2, 74);
     background-size: 100% 100%;
     background-position: center center;
     padding: 20px;
 }
 
-.container{
+.container {
     width: auto;
 }
 
-#titleProyect{
+#titleProyect {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#proyect{
+#proyect {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 30px;
     width: 350px;
 }
 
-#fotoProyecto:hover{
+#fotoProyecto:hover {
     box-shadow: 5px 5px 20px white;
 }
 
-#contain{
+#contain {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+}
+
+@media (max-width: 470px) {
+    #newProyect {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #botons {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

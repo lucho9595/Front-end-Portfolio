@@ -31,6 +31,10 @@ h3 {
     align-items: center;
 }
 
+#newExp{
+    margin-top: 15px;
+}
+
 @media (max-width: 470px) {
     #newExp {
         display: flex;

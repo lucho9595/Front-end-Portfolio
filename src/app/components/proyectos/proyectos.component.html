@@ -2,7 +2,7 @@
     <div id="titleProyect">
         <h1 class="text-center text-white" id="proyect">Proyectos Realizados</h1>
     </div>
-    <div class="col-lg-2">
+    <div id="newProyect" class="col-lg-2">
         <button type="button" class="btn btn-light" routerLink="/newproyect" *ngIf="isLogged">
             Nuevo Proyecto
         </button>
@@ -21,13 +21,13 @@
                     <img [src]='proyects?.img' alt="" class="img-fluid" id="fotoProyecto" width="530px" /></a>
                 </div>
             </div>
-            <div class="mx-auto">
-                <div id="botons" class="text-white mx-auto" *ngIf="isLogged">
+            <div id="botons" class="mx-auto">
+                <div class="text-white mx-auto" *ngIf="isLogged">
                     <button class="btn btn-light" routerLink="/editproyect/{{proyects.id}}">
                         <i class="bi bi-pencil"></i> Editar
                     </button>
                 </div>
-                <div class="text-white" *ngIf="isLogged">
+                <div class="text-white mx-auto" *ngIf="isLogged">
                     <button class="btn btn-danger" (click)="delete(proyects.id)">
                         <i class="bi bi-trash-fill"></i> Borrar
                     </button>
