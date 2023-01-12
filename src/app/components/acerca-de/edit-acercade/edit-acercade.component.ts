@@ -26,7 +26,7 @@ export class EditAcercadeComponent implements OnInit {
       },
       error: err => {
         alert("Error al modificar Persona");
-        this.router.navigate(['']);
+        this.router.navigate(['/home']);
       }
     })
   }
@@ -36,11 +36,11 @@ export class EditAcercadeComponent implements OnInit {
     this.persona.img = this.imageService.url
     this.personaService.update(id, this.persona).subscribe(
       data => {
-        this.router.navigate(['']);
+        this.router.navigate(['/home']);
         alert("Persona Editada")
       }, err => {
         alert("Error al modificar Persona");
-        this.router.navigate(['']);
+        this.router.navigate(['/home']);
       }
     )
   }

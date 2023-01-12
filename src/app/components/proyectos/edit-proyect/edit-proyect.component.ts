@@ -24,7 +24,7 @@ export class EditProyectComponent implements OnInit {
           this.proyects = data;
         }, err => {
           alert("Error al modificar");
-          this.router.navigate(['']);
+          this.router.navigate(['/home']);
         }
       )
     }
@@ -34,11 +34,11 @@ export class EditProyectComponent implements OnInit {
       this.proyects.img = this.imageService.url
       this.proyectService.update(this.proyects, id).subscribe(
         data => {
-          this.router.navigate(['']);
+          this.router.navigate(['/home']);
           alert("Proyecto Editado")
         }, err => {
           alert("Error al modificar proyecto");
-          this.router.navigate(['']);
+          this.router.navigate(['/home']);
         }
       )
     }

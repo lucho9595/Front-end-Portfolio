@@ -31,11 +31,11 @@ export class NewProyectComponent implements OnInit {
     this.proyectService.save(proyects).subscribe({
       next: (_data) => {
         alert('Proyecto agregado');
-        this.router.navigate(['']);
+        this.router.navigate(['/home']);
       },
       error: () => {
         alert('Fallo');
-        this.router.navigate(['']);
+        this.router.navigate(['/home']);
       }
     });
   }
