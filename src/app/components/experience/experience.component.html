@@ -21,12 +21,12 @@
                         </div>
                     </div>
                     <div id="botons" class="mx-auto">
-                        <div class="text-white mx-auto" *ngIf="isLogged">
+                        <div class="mb-2 text-center text-white mx-auto" *ngIf="isLogged">
                             <button class="btn btn-light" routerLink="/editexp/{{Experiencie.id}}">
                                 <i class="bi bi-pencil"></i> Editar
                             </button>
                         </div>
-                        <div class="text-white mx-auto" *ngIf="isLogged">
+                        <div class="text-center text-white mx-auto" *ngIf="isLogged">
                             <button class="btn btn-danger" (click)="delete(Experiencie.id)">
                                 <i class="bi bi-trash-fill"></i> Borrar
                             </button>
