@@ -8,26 +8,24 @@
         </button>
     </div>
     <div>
-        <div *ngFor="let proyects of proyects">
-            <div class="row" id="contain">
-                <div class="text-white col">
-                    <h3>{{proyects?.nombre}}</h3>
-                </div>
-                <div class="text-white col">
-                    {{proyects?.description}}
-                </div>
-                <div class="col">
-                    <a href={{proyects.url_imagen}} target="_blank">
+        <div id="container" class="mt-3 mx-auto" *ngFor="let proyects of proyects">
+            <div class="text-center text-white col">
+                <h3>{{proyects?.nombre}}</h3>
+            </div>
+            <div class="text-white text-center col">
+                {{proyects?.description}}
+            </div>
+            <div class="col">
+                <a href={{proyects.url_imagen}} target="_blank">
                     <img [src]='proyects?.img' alt="" class="img-fluid" id="fotoProyecto" width="530px" /></a>
-                </div>
             </div>
             <div id="botons" class="mx-auto">
-                <div class="text-white mx-auto" *ngIf="isLogged">
+                <div class="mt-2 text-center text-white mx-auto" *ngIf="isLogged">
                     <button class="btn btn-light" routerLink="/editproyect/{{proyects.id}}">
                         <i class="bi bi-pencil"></i> Editar
                     </button>
                 </div>
-                <div class="text-white mx-auto" *ngIf="isLogged">
+                <div class="mt-2 pb-2 text-center text-white mx-auto" *ngIf="isLogged">
                     <button class="btn btn-danger" (click)="delete(proyects.id)">
                         <i class="bi bi-trash-fill"></i> Borrar
                     </button>
