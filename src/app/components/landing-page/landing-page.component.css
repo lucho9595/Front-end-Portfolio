@@ -31,11 +31,11 @@ html {
     display: flex;
     position: relative;
     margin-left: 190px;
+    margin-bottom: 55px;
     flex-wrap: wrap;
     flex-direction: column;
     background-color: #ffffff80;
     width: 850px;
-    height: 550px;
     justify-content: center;
     border-radius: 10px;
 }
