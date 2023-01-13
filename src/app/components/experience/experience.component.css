@@ -35,6 +35,9 @@ h3 {
     margin-top: 15px;
 }
 
+#container{
+}
+
 @media (max-width: 470px) {
     #newExp {
         display: flex;
