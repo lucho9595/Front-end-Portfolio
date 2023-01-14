@@ -1,37 +1,38 @@
 <div class="container">
     <div class="row">
-        <div>
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div id="background">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm" id="formContain">
                 <div class="form-group">
-                    <label for="nombre">Nombre del proyecto:</label>
+                    <label for="nombre" class="text-white">Nombre del proyecto:</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
                 </div>
                 <div class="form-group">
-                    <label for="description">Descripcion del proyecto:</label>
+                    <label for="description" class="text-white">Descripcion del proyecto:</label>
                     <input type="text" class="form-control" id="description" name="description"
                         [(ngModel)]="description" required>
                 </div>
                 <div class="form-group">
-                    <label for="url">Url del proyecto:</label>
-                    <input type="text" class="form-control" id="url" name="url"
-                        [(ngModel)]="url_imagen" required>
+                    <label for="url" class="text-white">Url del proyecto:</label>
+                    <input type="text" class="form-control" id="url" name="url" [(ngModel)]="url_imagen" required>
                 </div>
                 <div class="form-group">
-                    <label for="img_proyect">Imagen del Proyecto:</label>
+                    <label for="img_proyect" class="text-white">Imagen del Proyecto:</label>
                     <input type="file" class="form-control" id="img_proyect" name="img_proyect"
                         (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
                     <br />
-                    <img id="blah"
+                    <img class="mx-auto"
                         [src]="imageService?.url || 'https://images.vexels.com/media/users/3/131734/isolated/preview/05d86a9b63d1930d6298b27081ddc345-photo-preview-frame-icon.png' "
                         alt="your image" />
                 </div>
-                <button class="mt-3 btn btn-primary">
-                    Agregar Proyecto
-                </button>
-                <br>
-                <button class="mt-3 btn btn-primary" routerLink="/home">
-                    Go back
-                </button>
+                <div id="botons">
+                    <button class="mt-3 btn btn-primary">
+                        Add Proyecto
+                    </button>
+                    <br>
+                    <button class="mt-3 btn btn-primary" routerLink="/home">
+                        Go back
+                    </button>
+                </div>
             </form>
         </div>
     </div>
