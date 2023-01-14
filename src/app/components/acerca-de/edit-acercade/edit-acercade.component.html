@@ -1,38 +1,40 @@
 <div class="container" *ngIf="persona">
     <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div id="background">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" id="formContain">
                 <div class="form-group">
-                    <label for="nombre">Nombre</label>
+                    <label for="nombre" class="text-white">Nombre</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre"
                         required>
                 </div>
                 <div class="form-group">
-                    <label for="apellido">Apellido</label>
+                    <label for="apellido" class="text-white">Apellido</label>
                     <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido"
                         required>
                 </div>
                 <div class="form-group">
-                    <label for="description">Descripcion de la Persona</label>
+                    <label for="description" class="text-white">Descripcion de la Persona</label>
                     <input type="text" class="form-control" id="description" name="description"
                         [(ngModel)]="persona.description" required>
                 </div>
                 <div class="form-group">
-                    <label for="img">Imagen de la Persona</label>
-                    <input type="file" class="form-control" id="img" name="img" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+                    <label for="img" class="text-white">Imagen de la Persona</label>
+                    <input type="file" class="form-control" id="img" name="img" (change)="uploadImage($event)"
+                        accept=".jpg, .jpeg, .png">
                     <br />
-                    <img id="blah"
+                    <img class="mx-auto"
                         [src]="imageService?.url || 'https://images.vexels.com/media/users/3/131734/isolated/preview/05d86a9b63d1930d6298b27081ddc345-photo-preview-frame-icon.png' "
                         alt="your image" />
                 </div>
-
-                <button class="mt-3 btn btn-primary">
-                    Editar Persona
-                </button>
-                <br>
-                <button class="mt-3 btn btn-primary" routerLink="">
-                    Go back
-                </button>
+                <div id="botons">
+                    <button class="mt-3 btn btn-primary">
+                        Editar Persona
+                    </button>
+                    <br>
+                    <button class="mt-3 btn btn-primary" routerLink="">
+                        Go back
+                    </button>
+                </div>
             </form>
         </div>
     </div>
