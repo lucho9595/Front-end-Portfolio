@@ -1,30 +1,32 @@
 <div class="container" *ngIf="skill">
     <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div id="background">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" id="formContain">
                 <div class="form-group">
-                    <label for="nombre">Nombre de la Skill</label>
+                    <label for="nombre" class="text-white">Nombre de la Skill</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="skill.nombre" required>
                 </div>
                 <div class="form-group">
-                    <label for="porcentaje">Ingrese el porcentaje</label>
+                    <label for="porcentaje" class="text-white">Ingrese el porcentaje</label>
                     <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" required>
                 </div>
                 <div class="form-group">
-                    <label for="img">Link Imagen:</label>
+                    <label for="img" class="text-white">Link Imagen:</label>
                     <input type="file" class="form-control" accept=".jpg, .png, .jpeg" (change)="uploadImg($event)" placeholder=" 🖼 Link Imagen" id="img" name="img" required>
                     <br />
-                    <img id="blah"
+                    <img class="mx-auto"
                         [src]="imageService?.url || 'https://images.vexels.com/media/users/3/131734/isolated/preview/05d86a9b63d1930d6298b27081ddc345-photo-preview-frame-icon.png'"
                         alt="your image" />
                 </div>
+                <div id="botons">
                 <button class="mt-3 btn btn-primary">
-                    Actualizar
+                    Edit Skill
                 </button>
                 <br>
                 <button class="mt-3 btn btn-primary" routerLink="/home">
                     Go back
                 </button>
+                </div>
             </form>
         </div>
     </div>
