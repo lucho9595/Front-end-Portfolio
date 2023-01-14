@@ -8,9 +8,9 @@ div {
     background-position: center center;
 }
 
-h1,
-h3 {
-    display: inline;
+h3,
+h5 {
+    display: inline-block;
 }
 
 #titleEducation{
