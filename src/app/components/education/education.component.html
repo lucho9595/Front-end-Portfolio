@@ -22,6 +22,12 @@
                         <div class="text-white text-center col">
                             {{Education?.descripcionE}}
                         </div>
+                        <div class="text-white text-center col">
+                            {{Education?.inicioE |date : "dd/MM/y"}}
+                        </div>
+                        <div class="text-white text-center col">
+                            {{Education?.finE |date : "dd/MM/y"}}
+                        </div>
                     </div>
                     <div id="botons" class="mx-auto">
                         <div class="mb-2 text-center text-white mx-auto" *ngIf="isLogged">

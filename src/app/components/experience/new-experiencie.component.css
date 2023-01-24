@@ -19,7 +19,7 @@
     justify-content: center;
     max-width: 666px;
     width: 100%;
-    height: 439px;
+    height: 596px;
     border-radius: 35px;
 }
 
@@ -45,4 +45,11 @@
     flex-wrap: wrap;
     flex-direction: column;
     margin-top: 36px;
+}
+
+#date{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 58%;
 }

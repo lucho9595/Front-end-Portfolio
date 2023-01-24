@@ -4,12 +4,19 @@
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" id="formContain">
                 <div class="form-group">
                     <label for="nombreE" class="text-white">Nombre de la Empresa</label>
-                    <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required>
+                    <input type="text" class="form-control" id="nombreE" [(ngModel)]="expLab.nombreE" name="nombreE" required>
                 </div>
                 <div class="form-group">
                     <label for="descripcionE" class="text-white">Descripcion de la Tarea</label>
-                    <input type="text" class="form-control" id="descripcionE" name="descripcionE"
-                        [(ngModel)]="expLab.descripcionE" required>
+                    <input type="text" class="form-control" id="descripcionE" [(ngModel)]="expLab.descripcionE" name="descripcionE" required>
+                </div>
+                <div class="form-group mx-auto" id="date">
+                    <label for="inicioE" class="text-white">Inicio de la Tarea</label>
+                    <input type="date" class="form-control" id="inicioE" [(ngModel)]="expLab.inicioE" name="inicioE" required>
+                </div>
+                <div class="form-group mx-auto" id="date">
+                    <label for="finE" class="text-white">Fin de la Tarea</label>
+                    <input type="date" class="form-control" id="finE" [(ngModel)]="expLab.finE" name="finE" required>
                 </div>
                 <div id="botons">
                     <button class="mt-3 btn btn-primary">

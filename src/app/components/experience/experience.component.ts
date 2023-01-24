@@ -28,9 +28,12 @@ export class ExperienceComponent implements OnInit {
     this.sExperiencie.lista().subscribe(
       data => {
         this.exp = data
+        console.log(this.exp)
       }
     )
   }
+
+  
 
   delete(id?: number) {
     if (id != undefined) {
