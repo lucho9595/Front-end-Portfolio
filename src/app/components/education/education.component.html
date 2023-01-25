@@ -1,48 +1,51 @@
 <div class="row p-3">
-    <div id="titleEducation">
-        <h1 class="text-center text-white" id="edu">Education</h1>
-    </div>
-    <div id="newEducation" class="col-lg-2">
-        <button type="button" class="btn btn-light" routerLink="/nuevaedu" *ngIf="isLogged">
-            New Education
-        </button>
-    </div>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <table class="table">
-            <tbody id="total">
-                <div *ngFor="let Education of education">
-                    <div id="description" class="mx-auto row">
-                        <div class="text-white col">
-                            <h3 id="nombreE">{{Education?.tituloE}}</h3>
-                        </div>
-                        <div class="text-white col">
-                            <h5 id="nombreE">{{Education?.nombreE}}</h5>
-                        </div>
-                        <div class="text-white text-center col">
-                            {{Education?.descripcionE}}
-                        </div>
-                        <div class="text-white text-center col">
-                            {{Education?.inicioE |date : "dd/MM/y"}}
-                        </div>
-                        <div class="text-white text-center col">
-                            {{Education?.finE |date : "dd/MM/y"}}
-                        </div>
-                    </div>
-                    <div id="botons" class="mx-auto">
-                        <div class="mb-2 text-center text-white mx-auto" *ngIf="isLogged">
-                            <button class="btn btn-light" routerLink="/editedu/{{Education.id}}">
-                                <i class="bi bi-pencil"></i> Edit
-                            </button>
-                        </div>
-                        <div class="text-center text-white mx-auto" *ngIf="isLogged">
-                            <button class="btn btn-danger" (click)="delete(Education.id)">
-                                <i class="bi bi-trash-fill"></i> Delete
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </tbody>
-        </table>
-    </div>
+  <div id="titleEducation">
+    <h1 class="text-center text-white" id="edu">Education</h1>
+  </div>
+  <div id="newEducation" class="col-lg-2">
+    <button type="button" class="btn btn-light" routerLink="/nuevaedu" *ngIf="isLogged">
+      New Education
+    </button>
+  </div>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-11">
+    <table class="table">
+      <tbody id="total">
+        <div *ngFor="let Education of education">
+          <div id="description" class="mx-auto row">
+            <div class="text-white col">
+              <h3 id="nombreE">{{Education?.tituloE}}</h3>
+            </div>
+            <div class="text-white col">
+              <h5 id="nombreE">{{Education?.nombreE}}</h5>
+            </div>
+            <div class="text-white text-center col">
+              {{Education?.descripcionE}}
+            </div>
+            <div class="text-center col" id="fechas">
+              <div class="text-white text-center col">
+                {{Education?.inicioE |date : "dd/MM/y"}}
+              </div>
+              <h5 class="text-white col">hasta</h5>
+              <div class="text-white text-center col">
+                {{Education?.finE |date : "dd/MM/y"}}
+              </div>
+            </div>
+          </div>
+          <div id="botons" class="mx-auto">
+            <div class="mb-2 text-center text-white mx-auto" *ngIf="isLogged">
+              <button class="btn btn-light" routerLink="/editedu/{{Education.id}}">
+                <i class="bi bi-pencil"></i> Edit
+              </button>
+            </div>
+            <div class="text-center text-white mx-auto" *ngIf="isLogged">
+              <button class="btn btn-danger" (click)="delete(Education.id)">
+                <i class="bi bi-trash-fill"></i> Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </tbody>
+    </table>
+  </div>
 </div>

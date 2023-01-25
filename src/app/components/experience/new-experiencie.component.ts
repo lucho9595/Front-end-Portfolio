@@ -11,8 +11,8 @@ import { SExperiencieService } from 'src/app/service/s-experiencie.service';
 export class NewExperiencieComponent implements OnInit {
   nombreE: string = '';
   descripcionE: string = '';
-  inicioE: Date ;
-  finE: Date;
+  inicioE: Date = new Date;
+  finE: Date = new Date;
 
   constructor(private sExperiencie: SExperiencieService, private router: Router) { }
 

@@ -44,6 +44,14 @@ h3 {
     margin-top: 15px;
 }
 
+#fechas{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
 @media (max-width: 470px) {
     #newExp {
         display: flex;
